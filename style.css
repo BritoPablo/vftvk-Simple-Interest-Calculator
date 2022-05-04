@@ -362,27 +362,30 @@
 
   .button {
       cursor: pointer;
+      font-size: 0.7em;
+      width: 100px;
   }
 
-  fieldset {
+  .container {
       background-color: #fff;
       border: none;
       border-radius: 1em;
       max-width: 90%;
       margin: auto;
+      padding: 1rem;
       position: relative;
       top: 50px;
       width: 30rem;
   }
 
-  fieldset > h1 {
+  .container h1 {
       color: rgb(167, 167, 167);      
       font-size: 2em;
       font-weight: 800;
       padding: 0.2em;
       text-align: center;
   }
-   fieldset label {
+   .container label {
        display: inline-block;
        width: 100px;
    }
@@ -403,3 +406,15 @@
        background-color: yellow;
        font-weight: bolder;
    }
+
+   @media (max-width: 530px) {
+    .container {
+      font-size: 10px;
+      padding: 10px;
+    }
+
+    .container p {
+      display: flex;
+      flex-direction: column;
+    }
+  }

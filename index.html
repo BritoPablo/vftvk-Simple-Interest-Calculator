@@ -10,17 +10,17 @@
 </head>
 <body>
 
-    <form id="form">
-        <fieldset>
+    <div class="container">
+        <form id="form">
                 <h1>Simple Interest Calculator</h1>
             <section id="mainSection">
                 <p>
-                    <label class="text" for="amount">Amount</label>
-                    <input type="number"  id="amount" name="amount">
+                    <label class="text" for="principal">Amount</label>
+                    <input type="number"  id="principal" name="principal">
                 </p>
                 <p>
                     <label class="text"  for="rate">Rate</label>
-                    <input type="range"  id="rate" value="105" name="rate" max="210" min="0" step="5">
+                    <input type="range"  id="rate" value="105" name="rate" max="200" min="10" step="5">
                     <span id="porcentage"  class="text" >10.5%</span>
                 </p>
                 <p>
@@ -31,9 +31,14 @@
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
                     </select>
                 </p>
-                <input type="submit" value="Compute Interest"/>
+                <input class="button" type="submit" value="Compute Interest"/>
                 <p id="result">
                 </p>
             </section>
@@ -42,8 +47,8 @@
                     <span><strong>&#169; Everyone Can Get Rich</strong></span>
                 </p>
 
-        </fieldset>
-
-        </form>    
+                
+            </form>    
+        </div>
 </body>
 </html>

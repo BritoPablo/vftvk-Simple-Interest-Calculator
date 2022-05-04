@@ -1,5 +1,6 @@
 const form = document.getElementById("form"),
         rate = document.getElementById("rate"),
+        principal = document.getElementById("principal"),
         porcentage = document.getElementById("porcentage");
 
 rate.oninput = () => {
@@ -10,7 +11,7 @@ console.log(isNaN('Hello'));
 
 form.addEventListener("submit", (e)=>{
     e.preventDefault();
-    const amount = document.getElementById("amount").value,
+    const amount = principal.value,
             years = document.getElementById("years").value,
             rateValue = rate.value;
    
@@ -18,8 +19,11 @@ form.addEventListener("submit", (e)=>{
         yearsFuture = "",
         result = document.getElementById("result");
     
-    if(!amount || amount <= 0 || isNaN(amount) ){
-        result.innerHTML = "Please you must enter a valid amount";
+    if( amount <= 0 ){
+        alert("You have to introduce a positive number");
+        principal.focus();
+
+        //result.innerHTML = "Please you must enter a valid amount";
     } else {
         amountReceive = (rateValue / 1000) * years * amount ;
         yearsFuture = new Date().getFullYear() + parseFloat(years);
